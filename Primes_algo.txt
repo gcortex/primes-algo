@@ -1,0 +1,29 @@
+//primes
+
+max = 11;
+mx = max*max;
+i=0;
+
+n=3;
+while (n<max)
+	
+	{j=2*n;
+	 prod=n*n;
+	 while (prod<mx)
+		{i=i+1;
+		 prd(i)=prod;
+		 prod=prod+j;};
+	 if(n==7) {n=11;} else {n=n+2;};
+	};
+
+pp=3;
+while (pp<mx)
+
+	{k=0;
+	 while (k<i)
+		{k=k+1;
+		 if (pp==prd(k)) {k=i+1;};
+		};
+	 if(k==i) {print(pp);};
+	 pp=pp+2;
+	};
