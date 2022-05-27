@@ -1,29 +1,30 @@
 //primes
 
-max = 11;
-mx = max*max;
-i=0;
-
-n=3;
-while (n<max)
-	
-	{j=2*n;
-	 prod=n*n;
-	 while (prod<mx)
-		{i=i+1;
-		 prd(i)=prod;
-		 prod=prod+j;};
-	 if(n==7) {n=11;} else {n=n+2;};
-	};
-
+max=13;
 pp=3;
-while (pp<mx)
-
-	{k=0;
-	 while (k<i)
-		{k=k+1;
-		 if (pp==prd(k)) {k=i+1;};
+prod(3)=9;
+m=5;
+while (m<=max)
+	{prod(m)=m*m;
+	i=0;
+	n=3;
+	while (n<m)
+		{j=2*n;
+		while (prod(n)<prod(m))
+			{i=i+1;
+		 	prd(i)=prod(n);
+		 	prod(n)=prod(n)+j;};
+		if(n==7) {n=11;} else {n=n+2;};
 		};
-	 if(k==i) {print(pp);};
-	 pp=pp+2;
-	};
+	while (pp<prod(m))
+		{flag=0;
+		k=0;
+		while (k<i)
+			{k=k+1;
+		 	if (pp==prd(k))
+				{flag=1;
+				k=i;};
+			};
+	 	if(flag==0) {print(pp);};
+	 	pp=pp+2;};
+	m=m+2;};
